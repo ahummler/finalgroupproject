@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root 'business_cards#index'
 
-  post 'twilio_sms/notify', to: 'twilio_sms#notify'
+  post 'twilio_sms/incoming', to: 'twilio_sms#incoming'
 end
