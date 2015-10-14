@@ -18,7 +18,7 @@ class BusinessCardsController < ApplicationController
 	def create
 		@card = BusinessCard.new(card_params)
 		if @card.save
-			redirect_to card_path(@card.id), notice: "Your business card has been saved successfully."
+			redirect_to business_card_path(@card.id), notice: "Your business card has been saved successfully."
 		else
 			render :new
 		end
@@ -34,7 +34,7 @@ class BusinessCardsController < ApplicationController
 
 	def destroy
 		@card.destroy
-		redirect_to cards_path, notice: "Your business card was deleted successfully."
+		redirect_to business_cards_path, notice: "Your business card was deleted successfully."
 	end
 
 	private
@@ -48,7 +48,7 @@ class BusinessCardsController < ApplicationController
 			@card = BusinessCard.find(params[:id])
 		rescue
 			flash[:notice] = "That business card is not available."
-			redirect_to cards_path
+			redirect_to business_cards_path
 		end
 	end
 
