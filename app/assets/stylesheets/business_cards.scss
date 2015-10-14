@@ -1,3 +1,52 @@
 // Place all the styles related to the business_cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// .h_li {
+//   padding: 20px;
+//   display: inline-block;
+//   list-style: none;
+//   color: white;
+// }
+
+nav {
+  color: white;
+  list-style: none;
+  background-color: blue;
+  padding-right: 25px;
+  list-style: none;
+}
+
+.h_nav {
+  li {
+    color: white;
+    display: inline-block;
+    margin: .5em;
+    padding: .5em;
+    // background-color: white;
+    &:hover {
+      background-color: white;
+      color: blue;
+    }
+  }
+  // a {ee
+  //   &:hover {
+  //     background-color: white;
+  //     color: blue;
+  //   }
+  // }
+}
+
+.v_nav {
+  position: absolute;
+  left: 952px;
+  top:150px;
+  padding: 1em;
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    color: white;
+    list-style-type: none;
+  }
+}
