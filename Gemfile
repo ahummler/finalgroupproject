@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'mandrill-api'
 gem 'twilio-ruby'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -25,7 +26,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'twilio-ruby'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'paperclip', '~> 4.3.1'
 gem 'twilio-ruby'
 
 # Use ActiveModel has_secure_password
