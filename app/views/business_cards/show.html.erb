@@ -1,23 +1,15 @@
-<h1>Card Content</h1>
-<div class="card content">
-<h1>Card Content</h1>
-    <p>
-       <ul>      
-         <li><%= @business_card.company_name %></li>
-         <li><%= @business_card.web_url%></li>
-         <li><%= @business_card.full_name %></li>
-         <li><%= @business_card.job_title %></li>
-         <li><%= @business_card.phone %></li>
-         <li><%= @business_card.email %></li>
-      </ul>
-    </p>
-
+<div id="card">
+  <div class="front">
+     <p id="company_name"><%= @card.company_name %></p>
+     <p id="full_name"><%= @card.full_name %></p>
+     <p id="job_title"><%= @card.job_title %></p>
+     <p id="phone"><%= @card.phone %></p>
+     <p id="email"><%= @card.email %></p>
+  </div>
+  <div class="back">
+    <div class="pic">
+        <p>Pic</p>
+    </div>
+     <p id="web_url"><%= @card.web_url%></p>
+  </div>
 </div>
-<!-- params from show tweeter -->
-
-<!-- # t.string   "company_name"
-#     t.string   "web_url"
-#     t.string   "full_name"
-#     t.string   "job_title"
-#     t.string   "phone"
-#     t.string   "email" -->
