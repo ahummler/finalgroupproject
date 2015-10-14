@@ -3,28 +3,28 @@
 
 <p>
 <%= f.label = :company_name, "Company Name" %>
-<%= f.text_field :company_name, required: true, placeholder:"Company Name" %>
+<%= f.text_field :company_name, placeholder:"Company Name" %>
 </p>
 
 <p>
 <%= f.label = :web_url, "Web URL" %>
-<%= f.text_field :web_url, required: true, placeholder:"Web URL" %>
+<%= f.text_field :web_url, placeholder:"Web URL" %>
 </p>
 <p>
 <%= f.label = :full_name, "Full Name" %>
-<%= f.text_field :full_name, required: true, placeholder:"Full Name" %>
+<%= f.text_field :full_name,  placeholder:"Full Name" %>
 </p>
 <p>
 <%= f.label = :job_title, "Job Title" %>
-<%= f.text_field :job_title, required: true, placeholder:"Job Title" %>
+<%= f.text_field :job_title, placeholder:"Job Title" %>
 </p>
 <p>
 <%= f.label = :phone, "Phone" %>
-<%= f.text_field :phone, required: true, placeholder:"Phone" %>
+<%= f.text_field :phone,  placeholder:"Phone" %>
 </p>
 <p>
 <%= f.label = :email, "Email" %>
-<%= f.text_field :email, required: true, placeholder:"Email" %>
+<%= f.email_field :email, placeholder:"Email" %>
 </p>
 <p>
 		<%= f.submit %>
