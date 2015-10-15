@@ -3,10 +3,10 @@ class BusinessCardsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 	def index
 		@cards = BusinessCard.all.reverse
-		respond_to do |format|
-			format.html
-			format.js { flash.now[:notice] = "Biz Card"}
-		end
+		# respond_to do |format|
+		# 	format.html
+		# 	format.js { flash.now[:notice] = "Biz Card"}
+	
 	end
 
 	def new
@@ -30,12 +30,7 @@ class BusinessCardsController < ApplicationController
 
 	def update
 		if @card.update(card_params)
-			# redirect_to @card, notice: "Updated successfully"
-			respond_to do |format|
-			format.html
-			format.js
-		end
-
+			redirect_to @card, notice: "Updated successfully"
 		else
 			render :edit
 		end

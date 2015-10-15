@@ -24,13 +24,14 @@
 <%= f.email_field :email, placeholder:"Email" %>
 </p>
 <p>
+		<%= f.label :avatar, "Photo/Logo" %><br>
+		<%= f.file_field :avatar %></p>
+	<p>
+<p>
 		<%= f.submit %>
 	</p>
 
-	<p>
-		<%= f.label :avatar %><br>
-		<%= f.file_field :avatar %></p>
-	<p>
+	
 <% end %>
 
 
