@@ -10,6 +10,24 @@
 
 </head>
 <body>
+	<header>
+		<nav class="v_nav">
+		<%= link_to 'signup', new_user_registration_path %>
+		<%= link_to 'login', new_user_session_path %>
+		<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+		<%= link_to 'create a business card', new_business_card_path %>
+		</nav>
+		<nav class="h_nav">
+		<%= link_to 'one', root_path %>
+		<%= link_to 'two', root_path %>
+		<%= link_to 'three', root_path %>
+		<%= link_to 'four', root_path %>
+		</nav>
+	</header>
+
+<% if flash[:notice] %>
+	<div class="notice"><%= flash[:notice] %></div>
+<% end %>
 
   <%= yield %>
 
