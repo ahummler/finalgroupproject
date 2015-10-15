@@ -1,35 +1,15 @@
-<nav class="v_nav">
-  <ul>
-    <a href="">
-      <li>first</li>
-    </a>
-    <a href="">
-      <li>second</li>
-    </a>
-    <a href="">
-      <li>third</li>
-    </a>
-    <a href="">
-      <li>fourth</li>
-    </a>
-  <ul>
-</nav>
 
+<nav class="v_nav">
+<%= link_to 'signup', new_user_registration_path %>
+<%= link_to 'login', new_user_session_path %>
+<%= link_to 'logout', destroy_user_session_path %>
+<%= link_to 'create a business card', new_business_card_path %>
+</nav>
 <nav class="h_nav">
-  <ul>
-    <a href="#a">
-      <li class="h_li">home</li>
-    </a>
-    <a href="#b">
-      <li class="h_li">about</li>
-    </a>
-    <a href="#c">
-      <li class="h_li">portfolio</li>
-    </a>
-    <a href="#d">
-      <li class="h_li">contact us</li>
-    </a>
-  <ul>
+<%= link_to 'one', root_path %>
+<%= link_to 'two', root_path %>
+<%= link_to 'three', root_path %>
+<%= link_to 'four', root_path %>
 </nav>
 
 <div id="card">
