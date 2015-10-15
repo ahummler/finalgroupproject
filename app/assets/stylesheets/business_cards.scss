@@ -26,11 +26,12 @@ nav {
   color: white;
   list-style: none;
   background-color: blue;
-  padding-right: 25px;
+  margin-right: 25px;
   list-style: none;
 }
 
 .h_nav {
+  width: 100%;
   li {
     color: white;
     display: inline-block;
@@ -46,9 +47,12 @@ nav {
 
 .v_nav {
   position: absolute;
-  left: 952px;
-  top:60px;
+  right: 0px;
+  top: 60px;
   padding: 1em;
+  width: 130px;
+  font-size: 20px;
+  border-radius: 40px;
   ul {
     padding: 0;
     margin: 0;
@@ -57,7 +61,4 @@ nav {
     color: white;
     list-style-type: none;
   }
-  width: 130px;
-  font-size: 20px;
-  border-radius: 40px;
 }
