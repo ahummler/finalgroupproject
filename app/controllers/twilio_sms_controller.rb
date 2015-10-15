@@ -12,11 +12,8 @@ class TwilioSmsController < ApplicationController
 
 		render text: response.text
 	end
- 
 
  	def identify
  		owner = User.find_by(phone: params[:from])
  	end
-
 end
-
