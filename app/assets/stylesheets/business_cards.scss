@@ -7,16 +7,31 @@
 //   list-style: none;
 //   color: white;
 // }
-
+a:link{
+  color:#fff;
+}
+a:link{
+  color:#fff;
+}
+a:hover{
+  color: #fff;
+}
+a:active{
+  color: #fff;
+}
+a.action_link{
+  text-decoration: none;
+}
 nav {
   color: white;
   list-style: none;
   background-color: blue;
-  padding-right: 25px;
+  margin-right: 25px;
   list-style: none;
 }
 
 .h_nav {
+  width: 100%;
   li {
     color: white;
     display: inline-block;
@@ -25,22 +40,19 @@ nav {
     // background-color: white;
     &:hover {
       background-color: white;
-      color: blue;
+      color: white;
     }
   }
-  // a {ee
-  //   &:hover {
-  //     background-color: white;
-  //     color: blue;
-  //   }
-  // }
 }
 
 .v_nav {
   position: absolute;
-  left: 952px;
-  top:150px;
+  right: 0px;
+  top: 60px;
   padding: 1em;
+  width: 130px;
+  font-size: 20px;
+  border-radius: 40px;
   ul {
     padding: 0;
     margin: 0;
