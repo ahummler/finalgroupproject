@@ -15,4 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require cards
-
+// $(document).on('page:change', function(){
+// 	$('.post').on('ajax:success', function(){
+// 		$(this).fadeOut();
+// 	});
+// });
