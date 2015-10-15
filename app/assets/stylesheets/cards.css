@@ -2,19 +2,18 @@
 		width: 600px;
 }
 
-.front{font-size: 4em;
+.front {font-size: 4em;
 	border: 1px solid black;
 	text-align: center;
 }
 
-.back{font-size: 4em;
+.back {font-size: 4em;
 	border: 1px solid black;
 	text-align: center;
 }
 
-.pic{height: 150px;
+.pic {height: 150px;
 		width: 150px;
 		border: 1px solid black;
 /*		display: inline;*/
-
 }
