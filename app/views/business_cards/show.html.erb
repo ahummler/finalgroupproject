@@ -1,3 +1,4 @@
+<%= render 'form' %>
 <div id="card">
   <div class="front">
      <p id="company_name"><%= @card.company_name %></p>
@@ -8,7 +9,7 @@
   </div>
   <div class="back">
     <div class="pic">
-        <p>Pic</p>
+     <p><%= image_tag @card.avatar.url(:medium) %></p>
     </div>
      <p id="web_url"><%= @card.web_url%></p>
   </div>
