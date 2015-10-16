@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ContactMe</title>
+  <title>Welcome</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.16/dist/jquery.flip.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body>
-   	<header>
-		<nav class="v_nav">
-		<%= link_to 'signup', new_user_registration_path %>
-		<%= link_to 'login', new_user_session_path %>
-		<%= link_to 'logout', destroy_user_session_path, method: :delete %>
-		<%= link_to 'create a business card', new_business_card_path %>
-		</nav>
-		<nav class="h_nav">
-		<%= link_to 'one', root_path %>
-		<%= link_to 'two', root_path %>
-		<%= link_to 'three', root_path %>
-		<%= link_to 'four', root_path %>
-		</nav>
-	</header>
-<% if flash[:notice] %>
-	<div class="notice"><%= flash[:notice] %></div>
-<% end %>
+	<body>
+		<container>
+			<nav>
+				<div class="presets">
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+				</div>
+				<div class="sidebar">
+					<div class="create_button">
+						<p>Create!</p>
+					</div>
+					<div class="sidebar_form">
+						<div><%= link_to 'NAME', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'TITLE', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'EMAIL', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'PHONE', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'SUBMIT', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+					</div>
+			</nav> 
+			<div class="yield">
 
-  <%= yield %>
+	  		<%= yield %>
 
-
-</body>
+			</div>
+			<footer>
+				<div class="segment">
+					<p>Contact</p>
+				</div>
+				<div class="segment">
+					<p>Careers</p>
+				</div>
+				<div class="segment">
+					<p>Privacy</p>
+				</div>
+				<div class="segment">
+					<p>Help</p>
+				</div>
+			</footer>
+		</container>
+	</body>
 </html>
