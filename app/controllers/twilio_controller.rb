@@ -5,8 +5,8 @@ class TwilioController < ApplicationController
 		from_number = params["From"]
 		recipient_email = params["Body"]
 		user = User.find_by(phone: from_number)
-		@personalcard = user.business_card
 			if user
+				@personalcard = user.business_card
 				CardMailer.business_card(recipient_email, @personalcard).deliver_now
 			end			
 		response = Twilio::TwiML::Response.new do |r|
