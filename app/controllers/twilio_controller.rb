@@ -3,21 +3,22 @@ class TwilioController < ApplicationController
 
 	def incoming
 		from_number = params["From"]
-		message_body = params["Body"]
-		user = User.find_by(phone: from_number) 
+		recipient_email = params["Body"]
+		user = User.find_by(phone: from_number)
+			if user
+				CardMailer.business_card(recipient_email).deliver_now
+			end			
+		#result = true 
 		response = Twilio::TwiML::Response.new do |r|
-			if user != nil 
-				r.sms "Your card is on its way to #{message_body}"
+			if user 
+				r.sms "Your card is on its way to #{recipient_email}"
 			else
 				r.sms 'There was a problem sending your business card.'
 			end
 		end
 		render text: response.text
 	end
-
-	# def send
-		
-	# end		
+	
 
 end
 
