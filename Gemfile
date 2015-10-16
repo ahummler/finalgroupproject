@@ -28,6 +28,9 @@ gem 'twilio-ruby'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paperclip', '~> 4.3.1'
 gem 'twilio-ruby'
+gem 'remotipart', '~> 1.0'
+gem 'pry-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
