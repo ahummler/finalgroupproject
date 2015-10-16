@@ -5,8 +5,9 @@ class TwilioController < ApplicationController
 		from_number = params["From"]
 		recipient_email = params["Body"]
 		user = User.find_by(phone: from_number)
+		@personalcard = user.business_card
 			if user
-				CardMailer.business_card(recipient_email).deliver_now
+				CardMailer.business_card(recipient_email, @personalcard).deliver_now
 			end			
 		#result = true 
 		response = Twilio::TwiML::Response.new do |r|
@@ -23,22 +24,3 @@ class TwilioController < ApplicationController
 end
 
 
-# From twilio : 
-
-# User sends text to twilio ph #
-# params[:From] will be used to lookup the user via phone number in our database.
-# Next, the associated business card with that user will be found
-# Then, mandrill will compile an email and address it to the recipient using params[:Body] from twilio. 
-# it will also include a link to the user’s business card 
-# Recipient will click on link and be directed to the user’s business card view w/o editing capabilities
-# Option to send contact info back to user, w/ option to sign up to service
-
-# Mandril model - set up search f(x) to look up user 
-
-# typeof for from_number and message_body
-
-# outbound_controller
-# 	twilio + mandrill 
-
-
-# user phone number will need to be sanitized by backend to only have 10 integers and concatinate the +
