@@ -8,7 +8,6 @@ class TwilioController < ApplicationController
 			if user
 				CardMailer.business_card(recipient_email).deliver_now
 			end			
-		#result = true 
 		response = Twilio::TwiML::Response.new do |r|
 			if user 
 				r.sms "Your card is on its way to #{recipient_email}"
