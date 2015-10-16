@@ -41,7 +41,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
   gem 'rspec-rails'
-  gem 'twilio-ruby'
 end
 
 group :development do
