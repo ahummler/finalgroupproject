@@ -8,7 +8,7 @@
      <p id="email"><%= @card.email %></p>
   </div>
   <div class="back">
-    if avatar != nil
+    if @card.avatar != nil
       <div class="pic"> 
        <p><%= image_tag @card.avatar.url(:medium) %></p>
       </div>
