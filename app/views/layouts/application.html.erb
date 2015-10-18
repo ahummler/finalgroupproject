@@ -8,7 +8,6 @@
   <script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.16/dist/jquery.flip.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<<<<<<< HEAD
 <body>
 	<header>
 	<% if current_user %>
@@ -37,40 +36,6 @@
 <% if flash[:notice] %>
 	<div class="notice"><%= flash[:notice] %></div>
 <% end %>
-=======
-	<body>
-		<container>
-			<nav>
-				<div class="presets">
-					<div><%= link_to '', root_path %></div>
-					<div><%= link_to '', root_path %></div>
-					<div><%= link_to '', root_path %></div>
-					<div><%= link_to '', root_path %></div>
-				</div>
-				<div class="sidebar">
-					<div class="create_button">
-						<p>Create!</p>
-					</div>
-					<div class="sidebar_form">
-						<div><%= link_to 'NAME', new_user_registration_path %>
-							<p>text here</p>
-						</div>
-						<div><%= link_to 'TITLE', new_user_registration_path %>
-							<p>text here</p>
-						</div>
-						<div><%= link_to 'EMAIL', new_user_registration_path %>
-							<p>text here</p>
-						</div>
-						<div><%= link_to 'PHONE', new_user_registration_path %>
-							<p>text here</p>
-						</div>
-						<div><%= link_to 'SUBMIT', new_user_registration_path %>
-							<p>text here</p>
-						</div>
-					</div>
-			</nav> 
-			<div class="yield">
->>>>>>> 71c0a3f5d566216c1fb6f0151745202c8f7f5815
 
 	  		<%= yield %>
 
