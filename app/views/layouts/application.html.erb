@@ -36,6 +36,38 @@
 <% if flash[:notice] %>
 	<div class="notice"><%= flash[:notice] %></div>
 <% end %>
+	<body>
+		<container>
+			<nav>
+				<div class="presets">
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+				</div>
+				<div class="sidebar">
+					<div class="create_button">
+						<p>Create!</p>
+					</div>
+					<div class="sidebar_form">
+						<div><%= link_to 'NAME', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'TITLE', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'EMAIL', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'PHONE', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+						<div><%= link_to 'SUBMIT', new_user_registration_path %>
+							<p>text here</p>
+						</div>
+					</div>
+			</nav> 
+			<div class="yield">
 
 	  		<%= yield %>
 
