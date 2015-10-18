@@ -10,7 +10,7 @@ class TwilioController < ApplicationController
 				CardMailer.business_card(recipient_email, @personalcard).deliver_now
 			end			
 		response = Twilio::TwiML::Response.new do |r|
-			if user 
+			if @user 
 				r.sms "Your card is on its way to #{recipient_email}"
 			else
 				r.sms 'There was a problem sending your business card.'
