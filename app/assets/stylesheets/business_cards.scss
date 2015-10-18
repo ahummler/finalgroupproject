@@ -1,64 +1,109 @@
 // Place all the styles related to the business_cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// .h_li {
-//   padding: 20px;
-//   display: inline-block;
-//   list-style: none;
-//   color: white;
-// }
-a:link{
-  color:#fff;
+
+body{
+  margin: 0px;
+  background-color: #FEFFA9;
+  font-family: arial;
 }
-a:link{
-  color:#fff;
+
+.container{
 }
-a:hover{
-  color: #fff;
-}
-a:active{
-  color: #fff;
-}
-a.action_link{
+
+.presets {
+  margin-left: 800px;
+  }
+
+.presets div{
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #92B3FF;
   text-decoration: none;
-}
-nav {
-  color: white;
-  list-style: none;
-  background-color: blue;
-  margin-right: 25px;
-  list-style: none;
+    // border: 1px solid black;
 }
 
-.h_nav {
-  width: 100%;
-  li {
-    color: white;
-    display: inline-block;
-    margin: .5em;
-    padding: .5em;
-    // background-color: white;
-    &:hover {
-      background-color: white;
-      color: white;
-    }
-  }
+.sidebar{
+  float: right;
+  // border: 1px solid black;
+  
 }
 
-.v_nav {
-  position: absolute;
-  right: 0px;
-  top: 60px;
-  padding: 1em;
-  width: 130px;
-  font-size: 20px;
-  border-radius: 40px;
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    color: white;
-    list-style-type: none;
-  }
+.create_button{
+  color: black;
+  display: block;
+  float: right;
+  text-decoration: none;
+  background-color: #81FFD4;
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+  margin-top: 50px;
+  position: fixed;
+  margin-left: 90px;
+  text-align: center;
+    // border: 1px solid black;
+
 }
+
+.sidebar_form{
+  color: black;
+  display: inline;
+  float: right;
+  margin-top: 130px;
+  text-decoration: none;
+  height: 340px;
+  width: 200px;
+  background-color: #FFA9F3
+  // border: 1px solid black;
+}
+
+.card{
+  height: 300px;
+  width: 500px;
+  margin-left: 420px;
+  margin-top: 150px;
+  background-color: #FFAE85;  
+  // border: 1px solid black;
+}
+
+.front {
+  font-size: 1em;
+  // border: 1px solid black;
+  text-align: center;
+}
+
+.back {
+  font-size: 1em;
+  // border: 1px solid black;
+  text-align: center;
+}
+
+.pic {
+  height: 150px;
+  width: 150px;
+  // border: 1px solid black;
+}
+
+footer{
+  background-color: #1DA7FF;
+  height: 91px;
+  margin-top: 150px;
+  margin-bottom: 0px;
+  // border: 1px solid black;
+}
+
+.segment{
+  width: 100px;
+  display: inline-block;
+  margin-left: 125px;
+  margin-right: 125px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #84FF9B;
+  // border: 1px solid black;
+}
+
