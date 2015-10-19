@@ -3,10 +3,7 @@ class BusinessCardsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 	def index
 		@cards = BusinessCard.all.reverse
-		# respond_to do |format|
-		# 	format.html
-		# 	format.js { flash.now[:notice] = "Biz Card"}
-	
+		@card = BusinessCard.new
 	end
 
 	def new
@@ -44,7 +41,7 @@ class BusinessCardsController < ApplicationController
 	private
 
 	def card_params
-		params.require(:business_card).permit(:company_name, :web_url, :full_name, :job_title, :phone, :email, :avatar).merge(user: current_user)
+		params.require(:business_cards).permit(:company_name, :web_url, :full_name, :job_title, :phone, :email, :avatar).merge(user: current_user)
 	end
 
 	def set_card
