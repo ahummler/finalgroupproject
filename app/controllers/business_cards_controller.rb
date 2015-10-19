@@ -3,11 +3,16 @@ class BusinessCardsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 	def index
 		@cards = BusinessCard.all.reverse
-		@card = BusinessCard.new
+		@card = BusinessCard.new	
 	end
 
 	def new
 		@card = BusinessCard.new
+
+		respond_to do |format|
+			format.html
+			format.js  
+		end
 	end
 
 	def edit
@@ -17,9 +22,13 @@ class BusinessCardsController < ApplicationController
 	end
 
 	def create
-		@card = BusinessCard.new(card_params)
+		@card = BusinessCard.create(card_params)
 		if @card.save
-			redirect_to business_card_path(@card.id), notice: "Your business card has been saved successfully."
+			respond_to do |format|
+				format.html {redirect_to business_card_path(@card), notice: "Aussie rules"}
+				format.js 
+			end
+			# redirect_to business_card_path(@card.id), notice: "Your business card has been saved successfully."
 		else
 			render :new
 		end

@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="front" style="background-color: red;">
+     <p id="company_name"><%= business_card.company_name %></p>
+     <p id="full_name"><%= business_card.full_name %></p>
+     <p id="job_title"><%= business_card.job_title %></p>
+     <p id="phone"><%= business_card.phone %></p>
+     <p id="email"><%= business_card.email %></p>
+  </div>
+  <div class="back">
+    <div class="pic">
+     <p><%= image_tag business_card.avatar.url(:medium) %></p>
+    </div>
+     <p id="web_url"><%= business_card.web_url%></p>
+  </div>
+</div>

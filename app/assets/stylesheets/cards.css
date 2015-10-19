@@ -1,10 +1,10 @@
-/*#card{height: 300px;
-		width: 800px;
+.card {
+	height: 300px;
+	width: 600px;
 }
 
-.front {font-size: 1em;
-	border: 1px solid black;
-	text-align: center;
+.front {
+	font-size: 4em;
 }
 
 .back {font-size: 1em;
@@ -15,5 +15,4 @@
 .pic {height: 150px;
 		width: 150px;
 		border: 1px solid black;
-/*		display: inline;*/
-}*/
+}
