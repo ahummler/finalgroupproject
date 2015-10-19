@@ -1,17 +1,13 @@
 <h1>Index</h1>
-<div id="card">
+<div class="card">
 <%= link_to 'new card', new_business_card_path, class: 'bcard', remote: true %>
   <div class="front">
     <p>User Name</p>
     <p>Company Name</p>
   </div>
-  <div class="back">
-  	<div class="pic">
-      <p id="prepend-me"><%= render 'form' %> </p>
-  		<p>Pic</p>
-  	</div>
-    <p>Back</p>
-  </div>
+  <%= render 'back' %>
 </div>
 
+<br><br>
 
+<%= render partial: 'test_card' %> 

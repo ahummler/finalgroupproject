@@ -24,13 +24,23 @@
 // });
 
 $(document).on('page:change ready', function() {
-	$('.card').on('ajax:success', function() {
-		$(this).fadeOut();
-	});
+ 	$('.card').on('ajax:success', function() {
+ 		$(this).fadeOut();
+ 	});
 
-	$('.bcard').on('click', function() {
-		$('#card').animate({
+ 	$('.bcard').on('click', function() {
+ 		$('#card').animate({
 			height: '400px'
 		}, 1500);
+	});
+
+	$("#card").flip({
+	  axis: 'y',
+	  trigger: 'click'
+	});
+
+	$(".card").flip({
+	  axis: 'y',
+	  trigger: 'click'
 	});
 });
