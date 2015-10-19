@@ -4,7 +4,6 @@ class BusinessCardsController < ApplicationController
 	def index
 		@cards = BusinessCard.all.reverse
 		@card = BusinessCard.new	
-	
 	end
 
 	def new
@@ -51,7 +50,7 @@ class BusinessCardsController < ApplicationController
 	private
 
 	def card_params
-		params.require(:business_card).permit(:company_name, :web_url, :full_name, :job_title, :phone, :email, :avatar).merge(user: current_user)
+		params.require(:business_cards).permit(:company_name, :web_url, :full_name, :job_title, :phone, :email, :avatar).merge(user: current_user)
 	end
 
 	def set_card
