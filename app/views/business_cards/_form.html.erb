@@ -1,4 +1,3 @@
-
 <%= form_for @card, remote: true, :authenticity_token => true do |f| %> 
 
 <p>
@@ -26,7 +25,6 @@
 <%= f.email_field :email, placeholder:"Email" %>
 </p>
 <p>
-
 		<%= f.label :avatar, "Photo/Logo" %><br>
 		<%= f.file_field :avatar %>
 	</p>
