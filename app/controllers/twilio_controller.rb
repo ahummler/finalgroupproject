@@ -2,7 +2,7 @@ class TwilioController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 	def incoming
-		from_number = params["From"]
+		from_number = params["From"].delete "+1"
 		recipient_email = params["Body"]
 		@user = User.find_by(phone: from_number)
 			if @user
