@@ -39,7 +39,7 @@ body{
   text-decoration: none;
   background-color: #81FFD4;
   padding: 5px;
-  width: 100px;
+  width: 110px;
   height: 50px;
   margin-top: 50px;
   position: fixed;
@@ -53,9 +53,9 @@ body{
   color: black;
   display: inline;
   float: right;
-  margin-top: 130px;
+  margin-top: 110px;
   text-decoration: none;
-  height: 340px;
+  height: 345px;
   width: 200px;
   background-color: #FFA9F3
   // border: 1px solid black;
@@ -63,36 +63,38 @@ body{
 
 .card{
   height: 300px;
-  width: 500px;
+  width: 600px;
   margin-left: 420px;
-  margin-top: 150px;
-  background-color: #FFAE85;  
-  // border: 1px solid black;
+  margin-top: 70px;
+  // background-color: #FFAE85;  
+  border: 1px solid black;
 }
 
 .front {
-  font-size: 1em;
+  font-size: 2em;
   // border: 1px solid black;
   text-align: center;
 }
 
 .back {
-  font-size: 1em;
+  font-size: 2em;
   // border: 1px solid black;
   text-align: center;
 }
 
-.pic {
-  height: 150px;
-  width: 150px;
-  // border: 1px solid black;
-}
+// .pic {
+//   height: 150px;
+//   width: 150px;
+//   // border: 1px solid black;
+// }
 
 footer{
   background-color: #1DA7FF;
   height: 91px;
-  margin-top: 150px;
+  width: 100%;
+  margin-top: 500px;
   margin-bottom: 0px;
+  position: fixed;
   // border: 1px solid black;
 }
 

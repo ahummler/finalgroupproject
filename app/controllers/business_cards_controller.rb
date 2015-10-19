@@ -22,13 +22,13 @@ class BusinessCardsController < ApplicationController
 	end
 
 	def create
-		@card = BusinessCard.create(card_params)
+		@card = BusinessCard.new(card_params)
 		if @card.save
-			respond_to do |format|
-				format.html {redirect_to business_card_path(@card), notice: "Aussie rules"}
-				format.js 
-			end
-			# redirect_to business_card_path(@card.id), notice: "Your business card has been saved successfully."
+			# respond_to do |format|
+			# 	format.html {redirect_to business_card_path(@card), notice: "New card created!"}
+			# 	format.js 
+			# end
+			redirect_to @card, notice: "Your business card has been saved successfully."
 		else
 			render :new
 		end
@@ -50,7 +50,7 @@ class BusinessCardsController < ApplicationController
 	private
 
 	def card_params
-		params.require(:business_cards).permit(:company_name, :web_url, :full_name, :job_title, :phone, :email, :avatar).merge(user: current_user)
+		params.require(:business_card).permit(:company_name, :web_url, :full_name, :job_title, :phone, :email, :avatar).merge(user: current_user)
 	end
 
 	def set_card
