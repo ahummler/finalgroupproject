@@ -1,0 +1,20 @@
+<%= form_for @card, html: { multipart: true } do |f| %> 
+	<p>
+		<%= f.label  :full_name, "NAME" %>
+		<%= f.text_field :full_name, placeholder: "Your Name" %>
+	</p>
+	<p>
+		<%= f.label :job_title, "TITLE" %>
+		<%= f.text_field :job_title, placeholder: "Your Title" %>
+	</p>
+	<p>
+		<%= f.label :email, "EMAIL" %>
+		<%= f.text_field :email,  placeholder: "Your Email" %>
+	</p>
+	<p>
+		<%= f.label :phone, "PHONE" %>
+		<%= f.text_field :phone, placeholder: "Your Phone Number" %>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

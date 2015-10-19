@@ -1,7 +1,7 @@
-$(document).on("page:change", function() {
-	$("#card").flip({
-	  axis: 'y',
-	  trigger: 'click'
-	});
-});
+// $(document).on("page:change", function() {
+// 	$("#card").flip({
+// 	  axis: 'y',
+// 	  trigger: 'click'
+// 	});
+// });
 

@@ -14,9 +14,33 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.remotipart
+
 //= require cards
 // $(document).on('page:change', function(){
 // 	$('.post').on('ajax:success', function(){
 // 		$(this).fadeOut();
 // 	});
 // });
+
+$(document).on('page:change ready', function() {
+ 	$('.card').on('ajax:success', function() {
+ 		$(this).fadeOut();
+ 	});
+
+ 	$('.bcard').on('click', function() {
+ 		$('#card').animate({
+			height: '400px'
+		}, 1500);
+	});
+
+	$("#card").flip({
+	  axis: 'y',
+	  trigger: 'click'
+	});
+
+	$(".card").flip({
+	  axis: 'y',
+	  trigger: 'click'
+	});
+});

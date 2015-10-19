@@ -1,4 +1,6 @@
-<%= form_for @card, html: { multipart: true } do |f| %> 
+
+<%= form_for @card, remote: true, :authenticity_token => true do |f| %> 
+
 <p>
 <%= f.label  :company_name, "Company Name" %>
 <%= f.text_field :company_name, placeholder:"Company Name" %>
@@ -24,16 +26,15 @@
 <%= f.email_field :email, placeholder:"Email" %>
 </p>
 <p>
+
 		<%= f.label :avatar, "Photo/Logo" %><br>
-		<%= f.file_field :avatar %></p>
+		<%= f.file_field :avatar %>
+	</p>
 	<p>
-<p>
 		<%= f.submit %>
 	</p>
-
-	
 <% end %>
 
-
+<!-- , html: { multipart: true } -->
 
  
