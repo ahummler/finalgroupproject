@@ -25,8 +25,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paperclip', '~> 4.3.1'
+gem 'twilio-ruby'
+gem 'remotipart', '~> 1.0'
+gem 'pry-rails'
 gem 'rails_12factor', group: :production
-	
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,7 +44,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
   gem 'rspec-rails'
-  gem 'twilio-ruby'
 end
 
 group :development do
