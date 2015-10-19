@@ -21,14 +21,31 @@
 					<div class="create_button">
 						<p>Create!</p>
 					</div>
-					
-					<%= render 'business_cards/sidebar_form' %>
-					</div>
+
+						<%= render 'business_cards/sidebar_form' %>
+
+				</div>
 			</nav> 
+
+				<% if current_user %>
+				    <span>Hello <%= current_user.email %></span>
+				<% end %>
+					<nav class="v_nav">
+			       <% if current_user %>
+							<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+							<%= link_to 'create a business card', new_business_card_path %>
+						<% else %>
+							<%= link_to 'signup', new_user_registration_path %>
+							<%= link_to 'login', new_user_session_path %>
+						<% end %> 
+					</nav>
+	
+			<% if flash[:notice] %>
+				<div class="notice"><%= flash[:notice] %></div>
+			<% end %>
+			
 			<div class="yield">
-
-	  		<%= yield %>
-
+				<%= yield %>
 			</div>
 			<footer>
 				<div class="segment">
@@ -43,6 +60,7 @@
 				<div class="segment">
 					<p>Help</p>
 				</div>
+				
 			</footer>
 		</container>
 	</body>
