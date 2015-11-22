@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 gem 'mandrill-api'
 gem 'twilio-ruby'
 gem 'devise'
